@@ -12,7 +12,7 @@ echo "setup"
 gcloud config set compute/zone ${INSTANCE_ZONE}
 
 echo "name replace"
-sed -i "s/PROJECT_NAME/${GCLOUD_PROJECT}/g" ../k8s/single-job.yaml
+sed -i '' "s/PROJECT_NAME/${GCLOUD_PROJECT}/g" ../k8s/single-job.yaml
 
 echo "create single job"
 kubectl apply -f ../k8s/single-job.yaml
